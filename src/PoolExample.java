@@ -22,7 +22,6 @@ public class PoolExample {
 
             System.out.println("creating #" + number);
 
-            // Используем execute вместо submit (нам не нужен Future, это быстрее)
             executor.submit(() -> {
                 int working = inProgress.incrementAndGet();
                 System.out.println("start #" + number + ", in progress: " + working);
